@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/vue@next"></script>
     <script defer src="main.js"></script>
 </head>
 
 <body>
+    <div class="wrapper">
+        <div id="todo">
+            <div class="todo-header">
+                <h1>TODO-LIST</h1>
+                <div>
+                    <input v-model="newItem" class="new-todo" name="title" placeholder="add todo">
+                    <button @click="addItem" class="add-btn">add</button>
+                </div>
+
+            </div>
+
+            <todo-item v-for="(todo, index) in todoList" :todo="todo" :key="index"></todo-item>
+            <!-- <li v-for="(item, index) in items" :key="index">
+                -->
+        </div>
+    </div>
 
 </body>
 
