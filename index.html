@@ -20,12 +20,8 @@
                     <input v-model="newItem" class="new-todo" name="title" placeholder="add todo">
                     <button @click="addItem" class="add-btn">add</button>
                 </div>
-
             </div>
-
             <todo-item v-for="(todo, index) in todoList" :todo="todo" :key="index"></todo-item>
-            <!-- <li v-for="(item, index) in items" :key="index">
-                -->
         </div>
     </div>
 
